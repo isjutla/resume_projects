@@ -5,13 +5,27 @@ from bisect import *
 # Python Version: 2.7.8
 # Date: 8/1/2014
 # Author: Inderjit Jutla
-# Use: Counsyl Interview Algorithm
+# Use: as example code
 #
-# Summary: This is an implementation of the algorithm for Counsyl's
-# online Algorithm challenge. The main reads from stdin
-# using the specified format for the problem. Data can
-# also be read in from test files using the 'processFile'
-# method.
+# Summary: In this problem we are given a set of packets
+# the are continious, integer, subsets of a range from 0 to n.
+# We need to choose the best set of packets such that
+# we form a set who's union is all integers from 0 to n.
+# Our constraint is that a packet has cost associated with
+# it's size. This cost is the length of the packet, divided
+# by a variable, lets call it 'a'. There is another cost
+# associated with each packet no matter the size. This cost
+# we can call 'b'. We want to minimize the total cost. The
+# data for the problem is input from stdin. The data is input as follows:
+# n
+# b
+# a
+# total # of packets
+# (n,m)
+# (v,w)
+# etc...
+# Where (n,m) for example is a packet from n to m, n included,
+# m not included.
 #
 # The algorithm is a dynamic algorithm. The given problem
 # consists of connecting overlapping regions. We need to
@@ -57,7 +71,7 @@ def findMin(end_dict=[], var=[1, 1, 1, 1]):
     """Main algorithm for solving problem
     input 'end_dict': dictionary where keys are the unique packet end points
     and value is a list of associated starting points
-    @input 'var': [bit size, latency, bitrate, #of packets]
+    @input 'var': [n, size cost, constant cost, #of packets]
     @output: min time to download data of size var[0] rounded to 3 decimals
     also prints out this time (if it exists) rounded to 3 decimals
     """

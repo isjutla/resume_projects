@@ -5,20 +5,20 @@ from findMin import *
 # Python Version: 2.7.8
 # Date: 8/1/2014
 # Author: Inderjit Jutla
-# Use: Unit test for Counsyl interview algorithm
+# Use: As example code
 #
 # Summary: used for unit testing the algorith in findMin
 
 
 class findMin_unittest(unittest.TestCase):
 
-    def test_counsyl000(self):
-        """Tests Counsyl dataset 000"""
+    def test_easyl000(self):
+        """Tests dataset 000"""
         filename = 'test_cases/input000.txt'
         self.assertEqual(processFile(filename), float(340))
 
-    def test_counsyl001(self):
-        """Tests Counsyl dataset 001"""
+    def test_easyl001(self):
+        """Tests dataset 001"""
         filename = 'test_cases/input001.txt'
         self.assertEqual(processFile(filename), float(260))
 
