@@ -7,25 +7,23 @@ from bisect import *
 # Author: Inderjit Jutla
 # Use: as example code
 #
-# Summary: In this problem we are given a set of packets
-# the are continious, integer, subsets of a range from 0 to n.
-# We need to choose the best set of packets such that
-# we form a set who's union is all integers from 0 to n.
-# Our constraint is that a packet has cost associated with
-# it's size. This cost is the length of the packet, divided
-# by a variable, lets call it 'a'. There is another cost
-# associated with each packet no matter the size. This cost
-# we can call 'b'. We want to minimize the total cost. The
-# data for the problem is input from stdin. The data is input as follows:
+# Summary: in this problem we know we have n bits of data, index starting at 0.
+# But we're given random intervals of the data, and we need to find
+# the best set of intervals whose union is all bits. Our constraint
+# is that reading an interval takes time, with an associated bitrate 'b'.
+# But each packet also has cost no matter the size: the latency 'a'. We want.
+# We want to minimize the cost of getting all the bits of the data. As in
+# the set of packets that will take the lowest time to read.
+# The data is read in from stdin as follows:
 # n
-# b
 # a
+# b
 # total # of packets
-# (n,m)
+# (x,y)
 # (v,w)
 # etc...
-# Where (n,m) for example is a packet from n to m, n included,
-# m not included.
+# Where (x,y) for example is a packet from x to y, x included,
+# y not included.
 #
 # The algorithm is a dynamic algorithm. The given problem
 # consists of connecting overlapping regions. We need to
@@ -36,10 +34,10 @@ from bisect import *
 # optimal (lowest time) set of packets that ends at [k,n) because
 # all costs associated with packet (k,n) itself is constant.
 #
-# Thus if T(x_i) is the optimal solution that connects all the bits
-# to x, using packet (i,x) Then T(x_i) = min(T(k) + 2*L + B(x_i)/B).
+# Thus if T(x_i) is the optimal cost that connects all the bits
+# to x, using packet (i,x) Then T(x_i) = min(T(k) + 2*L + B(x_i)/b).
 # For all k where k is all the packets that end within the range of x_i.
-# B(x_i) is the length of packet x_i and B is the bitrate. L is the latency.
+# B(x_i) is the length of packet x_i and b is the bitrate. L is the latency.
 # We examine all packets that end at x. To find the global
 # optimum solution for a packet that ends at x. Since the problem can
 # be built up from packets that end at low values. I start with the lowest
