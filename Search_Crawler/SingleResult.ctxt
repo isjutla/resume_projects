@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=_name\ _price\ _ship\ _vendor
+comment0.target=SingleResult(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\ Main\ Constructor\ for\ SingleResult\ object\r\n\ @param\ _name\ is\ the\ name\ of\ the\ product\r\n\ @param\ _price\ is\ the\ price\ of\ the\ product\ (may\ include\ '$'\ sign)\r\n\ @param\ _ship\ is\ the\ shippping\ cost\ (may\ includ\ '$'\ sign)\r\n\ @param\ _vendor\ is\ the\ name\ of\ the\ vendor,\ including\ number\ of\ additions\ stors\r\n
+comment1.params=
+comment1.target=void\ print()
+comment1.text=\ Prints\ out\ the\ attributes\ of\ the\ SingleResults\ object\ in\ a\ convienent\ format\r\n
+numComments=2

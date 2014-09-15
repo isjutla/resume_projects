@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\ Argument\ parser,\ takes\ care\ typical\ improper\ inputs\ \r\n
+comment1.params=url
+comment1.target=void\ numOfResults(java.lang.String)
+comment1.text=\ Prints\ the\ number\ of\ results\ for\ a\ given\ search\r\n\ @param\ url\ is\ the\ the\ exact,\ correct\ url\ of\ the\ search\ (first\ page\ of\ results)\r\n
+comment2.params=url
+comment2.target=void\ pageResults(java.lang.String)
+comment2.text=\ Prints\ out\ the\ main\ attributes\ of\ each\ result\ on\ a\ page\r\n\ @param\ url\ is\ the\ correct,\ exact\ url\ of\ some\ search\ on\ some\ valid\ page\r\n
+comment3.params=url
+comment3.target=SingleResult[]\ pageResultsArray(java.lang.String)
+comment3.text=\ Almost\ exactly\ the\ same\ as\ pageResults\ but\ returns\ an\ array\ of\ SingleResult\ \r\n\ objects\ containg\ the\ results\ for\ a\ page\r\n\ @param\ url\ is\ the\ correct,\ exact\ url\ of\ some\ search\ on\ some\ valid\ page\r\n
+numComments=4

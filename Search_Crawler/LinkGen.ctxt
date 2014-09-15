@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=a
+comment0.target=java.lang.String\ search(java.lang.String)
+comment0.text=\ Creates\ first\ page\ url\ for\ a\ search\ (unspecified\ page)\r\n\ @param\ a\ is\ a\ correctly\ formatted\ search\ input\r\n\ @return\ String\ containing\ exact\ url\r\n
+comment1.params=a\ page
+comment1.target=java.lang.String\ search(java.lang.String,\ int)
+comment1.text=\ Creates\ url\ for\ some\ page\ of\ a\ search\ (may\ not\ exist)\ \r\n\ @param\ a\ is\ the\ correctly\ formatted\ search\ input\r\n\ @param\ page\ is\ an\ unsigned\ integer\r\n\ @return\ String\ containg\ exact\ url\ for\ search\ and\ page\r\n
+comment2.params=search
+comment2.target=boolean\ badSearch(java.lang.String)
+comment2.text=\ Checks\ if\ search\ contains\ only\ numebrs\ and\ letters\r\n\ @param\ search\ is\ the\ search\ input\r\n\ @return\ boolean\ true\ if\ the\ search\ contains\ non\ numbers\ and\ letters\r\n
+comment3.params=link
+comment3.target=boolean\ offPage(java.lang.String)
+comment3.text=\ Checks\ if\ the\ specified\ page\ of\ a\ result\ exists\r\n\ @param\ link\ is\ the\ exact,\ correct\ link\ for\ a\ page\r\n\ @return\ boolean\ true\ if\ the\ \r\n
+numComments=4
